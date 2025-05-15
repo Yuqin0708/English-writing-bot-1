@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 
 # ====== 安全驗證：通關密語 ======
-PASSWORD = "teacher123"  # 可以自行修改成你想要的密碼
+PASSWORD = st.secrets["APP_PASSWORD"]
 
 if "authenticated" not in st.session_state:
     st.session_state.authenticated = False
